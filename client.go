@@ -141,7 +141,7 @@ func (client *Client) DeleteCard(id string) error {
 
 // Webhook.
 func (client *Client) GetWebhooks() (webhooks []Webhook, err error) {
-	return webhooks, client.Get("/token/"+client.token+"/webhooks", params, &webhooks)
+	return webhooks, client.Get("/token/"+client.token+"/webhooks", nil, &webhooks)
 }
 func (client *Client) GetWebhook(id string, params url.Values) (webhook Webhook, err error) {
 	return webhook, client.Get("/webhooks/"+id, params, &webhook)
