@@ -152,6 +152,6 @@ func (client *Client) PutWebhook(id string, params url.Values) (webhook Webhook,
 func (client *Client) PostWebhook(params url.Values) (webhook Webhook, err error) {
 	return webhook, client.Post("/webhooks", params, &webhook)
 }
-func (client *Client) DeleteWebhook(id string, params url.Values) error {
+func (client *Client) DeleteWebhook(id string) error {
 	return client.Delete("/webhooks/" + id)
 }

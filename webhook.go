@@ -10,7 +10,7 @@ import (
 	"unicode/utf8"
 )
 
-type WebHook struct {
+type Webhook struct {
 	Id          string `json:"id"`
 	Description string `json:"description"`
 	IdModel     string `json:"idModel"`
