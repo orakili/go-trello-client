@@ -60,8 +60,8 @@ type Board struct {
 	DateLastActivity string   `json:"dateLastActivity"`
 	DateLastView     string   `json:"dateLastView"`
 	ShortUrl         string   `json:"shortUrl"`
-	Lists            []List   `json:"lists"`
-	Cards            []Card   `json:"cards"`
-	Labels           []Label  `json:"labels"`
-	Actions          []Action `json:"actions"`
+	Lists            []List   `json:"lists,omitempty"`
+	Cards            []Card   `json:"cards,omitempty"`
+	Labels           []Label  `json:"labels,omitempty"`
+	Actions          []Action `json:"actions,omitempty"`
 }

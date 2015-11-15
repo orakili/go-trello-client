@@ -6,6 +6,6 @@ type Action struct {
 	Data            interface{} `json:"data"`
 	Type            string      `json:"type"`
 	Date            string      `json:"date"`
-	Member          []Member    `json:"member"`
+	Member          []Member    `json:"member,omitempty"`
 	MemberCreator   Member      `json:"memberCreator"`
 }

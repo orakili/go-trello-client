@@ -7,6 +7,5 @@ type List struct {
 	IdBoard    string  `json:"idBoard"`
 	Pos        float32 `json:"pos"`
 	Subscribed bool    `json:"subscribed"`
-	Cards      []Card  `json:"cards"`
-	Board      []Board `json:"board"`
+	Cards      []Card  `json:"cards,omitempty"`
 }

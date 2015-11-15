@@ -35,13 +35,14 @@ type Card struct {
 	IdShort               int          `json:"idShort"`
 	IdAttachmentCover     string       `json:"idAttachmentCover"`
 	ManualCoverAttachment bool         `json:"manualCoverAttachment"`
-	Labels                []Label      `json:"labels"`
+	Labels                []Label      `json:"labels,omitempty"`
 	Name                  string       `json:"name"`
-	Pos                   float32      `json:"post"`
+	Pos                   float32      `json:"pos"`
 	ShortUrl              string       `json:"shortUrl"`
 	Url                   string       `json:"url"`
 	Attachments           []Attachment `json:"attachments"`
-	Members               []Member     `json:"members"`
-	MembersVoted          []Member     `json:"membersVoted"`
-	Actions               []Action     `json:"actions"`
+	Members               []Member     `json:"members,omitempty"`
+	MembersVoted          []Member     `json:"membersVoted,omitempty"`
+	Actions               []Action     `json:"actions,omitempty"`
+	Checklists            []Checklist  `json:"checklists,omitempty"`
 }
